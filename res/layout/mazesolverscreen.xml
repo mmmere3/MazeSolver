@@ -1,0 +1,43 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <CheckBox
+        android:id="@+id/drawEraseMode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="Draw Walls?" />
+
+    <Button
+        android:id="@+id/clearMaze"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/drawEraseMode"
+        android:layout_alignBottom="@+id/drawEraseMode"
+        android:layout_centerHorizontal="true"
+        android:onClick="clearMaze"
+        android:text = "Clear Maze"/>
+
+    <Button
+        android:id="@+id/solveMaze"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/clearMaze"
+        android:layout_alignBottom="@+id/clearMaze"
+        android:layout_marginLeft="18dp"
+        android:layout_toRightOf="@+id/clearMaze"
+        android:onClick="solveMaze"
+        android:text="Solve Maze" />
+
+    <sofia.graphics.ShapeView
+        android:id="@+id/shapeView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/drawEraseMode" />
+
+</RelativeLayout>
